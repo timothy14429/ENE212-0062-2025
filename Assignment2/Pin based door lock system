@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int userPin = 0;
+  int correctPin = 1234;
+   int attemptsCounter = 0;
+
+
+ while(attemptsCounter < 3 && userPin != correctPin){
+
+            printf("Please enter your pin:");
+            scanf("%d",&userPin);
+
+            if(userPin == correctPin){
+                printf("Access granted\n");
+
+
+            }
+            else{
+             printf("Access denied try again!\n");
+            }
+            attemptsCounter++;
+            if (attemptsCounter >2){
+                printf("Number of attempts over!");
+            }
+
+}
+
+    return 0;
+}
